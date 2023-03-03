@@ -1,0 +1,20 @@
+---
+pool: 'Default'
+trigger:  
+  - main
+jobs:
+  - job: openmrs_build
+    steps:
+      - task: Maven@3
+        inputs:
+          mavenPOMFile: 'pom.xml'
+          goals: 'package'
+          publishJUnitResults: true
+          testResultsFiles: '**/surefire-reports/TEST-*.xml' 
+          javaHomeOption: 'JDKVersion'
+          jdkVersionOption: '1.11'
+          mavenVersionOption: 'Path'
+          mavenDirectory: '/usr/share/maven'
+          mavenAuthenticateFeed: false
+          
+        

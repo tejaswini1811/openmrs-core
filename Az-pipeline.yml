@@ -11,8 +11,8 @@ jobs:
           goals: 'package'
           publishJUnitResults: true
           testResultsFiles: '**/surefire-reports/TEST-*.xml' 
-          javaHomeOption: 'JDKVersion'
-          jdkVersionOption: '1.11'
+          javaHomeOption: 'Path'
+          jdkDirectory: '/usr/lib/jvm/java-11-openjdk-amd64'
           mavenVersionOption: 'Path'
           mavenDirectory: '/usr/share/maven'
           mavenAuthenticateFeed: false

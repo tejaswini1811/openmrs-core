@@ -7,6 +7,6 @@ node('jenkins'){
         sh 'export PATH="/usr/lib/jvm/java-11-openjdk-amd64/bin/:$PATH"'
     }
     stage('package'){
-        sh 'cd openmrs-core && mvn clean package'
+        sh ' mvn clean package'
     }
 }
